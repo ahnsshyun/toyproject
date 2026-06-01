@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>방명록</title>
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+  <div class="header">
+    <div class="header-inner">
+      <p class="header-label">Guestbook · 방명록</p>
+      <h1 class="header-title">작은 기록들이 모이는 곳</h1>
+      <p class="header-desc">당신의 흔적을 남겨주세요. 짧은 인사도, 긴 이야기도 환영합니다.</p>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="../html/hot.html" class="btn" id="popularBtn">☆ 인기글</a>
+    <a href="../html/write.html" class="btn" id="writeBtn">+ 글쓰기</a>
+  </div>
+</header>
+
+<main class="main-box">
+  <div class="section-header">
+    <h2 class="section-title">
+      최신 글
+      <span class="count" id="postCount"></span>
+    </h2>
+  </div>
+
+  <div class="post-list" id="postList"></div>
+
+  <div class="pagination" id="pagination"></div>
+</main>
+
+<footer>
+
+  <div class="footer-logo">방명록</div>
+  <p class="footer-text">소중한 방문을 기록해주세요.</p>
+  
+</footer>
+
+<script src="../js/main.js"></script>
+  
+</body>
+</html>

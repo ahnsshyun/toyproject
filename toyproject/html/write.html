@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guestbook</title>
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/write.css">
+</head>
+
+<body>
+  <header>
+  <div class="header">
+    <div class="header-inner">
+      <p class="header-label">Guestbook · 방명록</p>
+      <h1 class="header-title">작은 기록들이 모이는 곳</h1>
+      <p class="header-desc">당신의 흔적을 남겨주세요. 짧은 인사도, 긴 이야기도 환영합니다.</p>
+    </div>
+  </div>
+
+  </header>
+
+  <div class="main-links">
+    <a href="../html/main.html" class="btn" id="homeBtn">글 목록으로 돌아가기</a>
+  </div>
+
+<main class="main-box">
+  <h2 class="write-title">글 작성</h2>
+
+  <div class="form-group">
+    <label for="title">제목</label>
+    <input type="text" id="title" placeholder="제목을 입력하세요">
+  </div>
+
+  <div class="form-group">
+    <label for="author">작성자</label>
+    <input type="text" id="author" placeholder="이름을 입력하세요">
+  </div>
+
+  <div class="form-group">
+    <label for="content">내용</label>
+    <textarea id="content" placeholder="내용을 입력하세요"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="password">비밀번호 (숫자 4자리)</label>
+    <input type="password" id="password" placeholder="숫자 4자리" maxlength="4" inputmode="numeric">
+  </div>
+
+  <button class="btn-submit" id="submitBtn">글 등록</button>
+</main>
+
+<footer>
+
+  <div class="footer-logo">방명록</div>
+  <p class="footer-text">소중한 방문을 기록해주세요.</p>
+  
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <p class="modal-msg" id="modalMsg"></p>
+    <button class="btn" id="modalClose">확인</button>
+  </div>
+</div>
+
+<script src="../js/write.js"></script>
+
+</body>
+</html>

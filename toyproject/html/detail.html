@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guestbook</title>
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/detail.css">
+</head>
+
+<body>
+  <header>
+  <div class="header">
+    <div class="header-inner">
+      <p class="header-label">Guestbook · 방명록</p>
+      <h1 class="header-title">작은 기록들이 모이는 곳</h1>
+      <p class="header-desc">당신의 흔적을 남겨주세요. 짧은 인사도, 긴 이야기도 환영합니다.</p>
+    </div>
+  </div>
+  </header>
+
+<div class="main-links">
+    <a href="../html/main.html" class="btn" id="homeBtn">글 목록으로 돌아가기</a>
+</div>
+
+<main class="main-box">
+
+  <div class="post-header">
+    <h2 class="post-title" id="postTitle"></h2>
+    <div class="post-meta">
+      <span id="postAuthor"></span>
+      <span id="postTime"></span>
+    </div>
+  </div>
+
+  <div class="post-content" id="postContent"></div>
+
+  <!-- 좋아요 / 수정 / 삭제 버튼 -->
+  <div class="post-actions">
+    <button class="action-btn like-btn" id="likeBtn">♥ 좋아요 <span id="likeCount">0</span></button>
+    <div class="post-actions-right">
+      <button class="action-btn edit-btn" id="editBtn">수정</button>
+      <button class="action-btn delete-btn" id="deleteBtn">삭제</button>
+    </div>
+  </div>
+</main>
+
+  <hr class="divider">
+
+    <!-- 댓글 목록 -->
+  <div class="comment-list-wrap">
+    <h3 class="comment-title">
+      댓글
+      <span class="comment-count" id="commentCount"></span>
+    </h3>
+    <div class="comment-list" id="commentList"></div>
+  </div>
+
+
+  <!-- 댓글 작성 -->
+  <div class="comment-write">
+    <h3 class="comment-title">댓글 작성</h3>
+    <div class="comment-form">
+      <div class="fg">
+        <label for="commentAuthor">작성자</label>
+        <input type="text" id="commentAuthor" placeholder="이름을 입력하세요">
+      </div>
+      <div class="fg">
+        <label for="commentPassword">비밀번호</label>
+        <input type="password" id="commentPassword" placeholder="숫자 4자리" maxlength="4" inputmode="numeric">
+      </div>
+      <div class="fg">
+        <label for="commentContent">내용</label>
+        <textarea id="commentContent" placeholder="댓글을 입력하세요"></textarea>
+      </div>
+      <button class="comment-submit" id="commentSubmitBtn">댓글 등록</button>
+    </div>
+  </div>
+
+
+<!-- 모달 -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <p class="modal-msg" id="modalMsg"></p>
+    <button class="modal-btn" id="modalClose">확인</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="passwordOverlay">
+  <div class="modal">
+    <button class="modal-close-x" id="passwordCancel">✕</button>
+    <p class="modal-msg">비밀번호를 입력해주세요.</p>
+    <input type="password" id="deletePassword" class="modal-input" placeholder="숫자 4자리" maxlength="4" inputmode="numeric">
+    <div class="modal-buttons">
+      <button class="modal-btn" id="passwordConfirm">확인</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="editOverlay">
+  <div class="modal">
+    <button class="modal-close-x" id="editCancel">✕</button>
+    <p class="modal-msg">글 수정</p>
+    <input class="modal-input" id="editTitle" placeholder="제목">  
+    <textarea class="modal-textarea" id="editContent"></textarea>
+    <div class="modal-buttons">
+      <button class="modal-btn" id="editConfirm">수정 완료</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">방명록</div>
+  <p class="footer-text">소중한 방문을 기록해주세요.</p>
+  
+</footer>
+
+<script src="../js/detail.js"></script>
+  
+</body>
+</html>
