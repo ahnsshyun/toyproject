@@ -56,7 +56,7 @@ async function submitPost(postData) {
     if (response.ok) {
       showModal('글이 등록되었습니다');
       document.getElementById('modalClose').addEventListener('click', () => {
-        window.location.href = '../html/main.html';
+        window.location.href = '/index.html';
       }, { once: true });
     } else {
       const err = await response.json();
