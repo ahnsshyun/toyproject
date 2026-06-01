@@ -173,7 +173,7 @@ document.getElementById('deleteBtn').addEventListener('click', () => {
 
       if (data.status === 200) {
         showModal('삭제되었습니다.', () => {
-          window.location.href = 'index.html';
+          window.location.href = '/index.html';
         });
       } else {
         showModal(data.message);  // 서버 에러 메시지 그대로 표시
